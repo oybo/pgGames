@@ -1,0 +1,18 @@
+{
+    "dt": {
+        "rtp": {
+            "Default": {
+                "min": 96.81,
+                "max": 96.81
+            }
+        },
+        "ows": {
+            "itare": true,
+            "tart": 1,
+            "igare": true,
+            "gart": 72
+        },
+        "jws": null
+    },
+    "err": null
+}

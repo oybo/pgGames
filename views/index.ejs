@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页面</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!--     
+        大概推测参数
+        ot = operation token 表示这个游戏的会话token，部署本地后可以任意值
+        btt = 类型： 1=正式 2=试玩
+        ops = 登录的认证信息，部署本地后可以任意值, 但是不能为空
+        l = 语言类型，国际化
+        iwk = 
+        oc = 
+        or =  估计是CDN服务器包括静态资源的域名地址，重要
+        __hv = 
+        
+        也可以直接用这个：https://localhost/126/index.html?ot=&btt=1&ops=abc&l=zh&iwk=1&oc=0&or=static.pg-nmga.com&__hv=1
+    -->
+    <button onclick="window.location.href=`https://localhost/126/index.html?ot=E48208EE-563D-6D3D-0B35-FFA2052B2DBC&btt=1&ops=aHtK0%2BleN2hqWuC5rivW9mN%2BuWfZ6ct1HSLKCxWEIUPZmfO5b8UggGDuXkIdL4aJILGwxEPB4hqkbnbO2urZaul5csfnOeNolpG5bj0h%2Fj5o%2Byd2J9S2Wcj7KFVIKXjE&l=zh&iwk=1&oc=0&or=static.pg-nmga.com&__hv=1`">游戏1-虎虎生财</button>
+</body>
+</html>
