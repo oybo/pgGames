@@ -1,0 +1,84 @@
+{
+    "dt": {
+        "si": {
+            "wp": null,
+            "lw": null,
+            "gm": 1,
+            "it": false,
+            "orl": [
+                2,
+                2,
+                5,
+                4,
+                4,
+                4,
+                6,
+                3,
+                3
+            ],
+            "fs": null,
+            "mf": {
+                "mt": [
+                    5
+                ],
+                "ms": [
+                    true
+                ],
+                "mi": [
+                    0
+                ]
+            },
+            "ssaw": 0.00,
+            "crtw": 0.0,
+            "imw": false,
+            "gwt": -1,
+            "ctw": 0.0,
+            "pmt": null,
+            "cwc": 0,
+            "fstc": null,
+            "pcwc": 0,
+            "rwsp": null,
+            "hashr": null,
+            "fb": null,
+            "ab": null,
+            "ml": 1,
+            "cs": 0.08,
+            "rl": [
+                2,
+                2,
+                5,
+                4,
+                4,
+                4,
+                6,
+                3,
+                3
+            ],
+            "sid": "1889940342225111040",
+            "psid": "1889940342225111040",
+            "st": 1,
+            "nst": 1,
+            "pf": 1,
+            "aw": 0.00,
+            "wid": 0,
+            "wt": "C",
+            "wk": "0_C",
+            "wbn": null,
+            "wfg": null,
+            "blb": 0.00,
+            "blab": 0.00,
+            "bl": 0.00,
+            "tb": 0.00,
+            "tbb": 0.00,
+            "tw": 0.00,
+            "np": 0.00,
+            "ocr": null,
+            "mr": null,
+            "ge": [
+                1,
+                11
+            ]
+        }
+    },
+    "err": null
+}

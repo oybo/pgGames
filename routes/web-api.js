@@ -3,74 +3,97 @@ var fs = require('fs');
 const path = require('path');
 var router = express.Router();
 
-/*
-    验证玩家会话的json
-*/
-const verifyOperatorPlayerSession = fs.readFileSync(path.join(__dirname,  '../jsons/verifyOperatorPlayerSession.json'), {encoding: 'utf-8'});
-const verifySession = fs.readFileSync(path.join(__dirname,  '../jsons/verifySession.json'), {encoding: 'utf-8'});
-/*
-    游戏信息，id和名称
-*/
-const gameName = fs.readFileSync(path.join(__dirname,  '../jsons/gameName.json'), {encoding: 'utf-8'});
-/*
-    socialInitConfig
-*/
-const socialInitConfig = fs.readFileSync(path.join(__dirname,  '../jsons/socialInitConfig.json'), {encoding: 'utf-8'});
-/*
-    游戏钱包
-*/
-const gameWallet = fs.readFileSync(path.join(__dirname,  '../jsons/gameWallet.json'), {encoding: 'utf-8'});
-/*
-    gameUI
-*/
-const gameUI = fs.readFileSync(path.join(__dirname, '../jsons/GameUI.json'), {encoding: 'utf-8'});
-/*
-    游戏ID资源，id-icon
-*/
-const getByResourcesTypeIds = fs.readFileSync(path.join(__dirname, '../jsons/GetByResourcesTypeIds.json'), {encoding: 'utf-8'});
-const getByReferenceIdsResourceTypeIds = fs.readFileSync(path.join(__dirname, '../jsons/GetByReferenceIdsResourceTypeIds.json'), {encoding: 'utf-8'});
-/*
-    gameRule
-*/
-const gameRule = fs.readFileSync(path.join(__dirname, '../jsons/gameRule.json'), {encoding: 'utf-8'});
-/*
-    游戏投注历史
-*/
-const BetSummary = fs.readFileSync(path.join(__dirname, '../jsons/BetSummary.json'), {encoding: 'utf-8'});
-const BetHistory = fs.readFileSync(path.join(__dirname, '../jsons/BetHistory.json'), {encoding: 'utf-8'});
 
-/* GET users listing. */
+/*
+    验证玩家会话
+*/
+// const verifyOperatorPlayerSession = fs.readFileSync(path.join(__dirname,  '../jsons/verifyOperatorPlayerSession.json'), {encoding: 'utf-8'});
 router.post('/auth/session/v2/verifyOperatorPlayerSession', function (req, res, next) {
+    let jsonFile;
+    // game id
+    let gi = req.body.gi;
+    if (gi === "126") {
+        // 虎虎生财
+        jsonFile = '../jsons/fortune-tiger/verifySession.json';
+    } else if (gi === "1695365") {
+        // 金龙送宝
+        jsonFile = '../jsons/fortune-dragon/verifySession.json';
+    }
+
+    const verifyOperatorPlayerSession = fs.readFileSync(path.join(__dirname, jsonFile), { encoding: 'utf-8' });
     res.send(JSON.parse(verifyOperatorPlayerSession));
 });
 
+/*
+    游戏会话验证，读取信息
+*/
 router.post('/auth/session/v2/verifySession', function (req, res, next) {
+    // 根据游戏id判断游戏，返回对应游戏会话信息，
+    let jsonFile;
+    // game id
+    let gi = req.body.gi;
+    if (gi === "126") {
+        // 虎虎生财
+        jsonFile = '../jsons/fortune-tiger/verifySession.json';
+    } else if (gi === "1695365") {
+        // 金龙送宝
+        jsonFile = '../jsons/fortune-dragon/verifySession.json';
+    }
+
+    const verifySession = fs.readFileSync(path.join(__dirname, jsonFile), { encoding: 'utf-8' });
     res.send(JSON.parse(verifySession));
 });
 
+
+/*
+    游戏信息，id和名称
+*/
+const gameName = fs.readFileSync(path.join(__dirname, '../jsons/gameName.json'), { encoding: 'utf-8' });
 router.post('/game-proxy/v2/GameName/Get', function (req, res, next) {
     res.send(JSON.parse(gameName));
 });
 
+
+/**
+    socialInitConfig
+*/
+const socialInitConfig = fs.readFileSync(path.join(__dirname, '../jsons/socialInitConfig.json'), { encoding: 'utf-8' });
 router.post('/game-proxy/Social/SocialInitConfig/Get', function (req, res, next) {
     res.send(JSON.parse(socialInitConfig));
 });
 
+
+/*
+    游戏我的钱包
+*/
+const gameWallet = fs.readFileSync(path.join(__dirname, '../jsons/gameWallet.json'), { encoding: 'utf-8' });
 router.post('/game-proxy/v2/GameWallet/Get', function (req, res, next) {
     res.send(JSON.parse(gameWallet));
 });
 
-/* GameUI */
+
+/*
+    gameUI
+*/
+const gameUI = fs.readFileSync(path.join(__dirname, '../jsons/GameUI.json'), { encoding: 'utf-8' });
 router.post('/game-proxy/v2/GameUI/Get', (req, res, next) => {
     res.json(JSON.parse(gameUI));
 });
 
-/* GetByResourcesTypeIds */
+
+/*
+    游戏ID资源，id-icon
+*/
+const getByResourcesTypeIds = fs.readFileSync(path.join(__dirname, '../jsons/GetByResourcesTypeIds.json'), { encoding: 'utf-8' });
 router.post('/game-proxy/v2/Resources/GetByResourcesTypeIds', (req, res, next) => {
     res.json(JSON.parse(getByResourcesTypeIds));
 });
 
-/* GetByReferenceIdsResourceTypeIds */
+
+/*
+    游戏ID资源
+*/
+const getByReferenceIdsResourceTypeIds = fs.readFileSync(path.join(__dirname, '../jsons/GetByReferenceIdsResourceTypeIds.json'), { encoding: 'utf-8' });
 router.post('/game-proxy/v2/Resources/GetByReferenceIdsResourceTypeIds', (req, res, next) => {
     // let atk = req.body?.atk,     // 游戏token：A20EZ1G6-B0O9-SV60-E57M-1V1J4O98T3VV
     //     btt = req.body?.btt,            // 类型： 1=正式 2=试玩
@@ -101,25 +124,51 @@ router.post('/game-proxy/v2/Resources/GetByReferenceIdsResourceTypeIds', (req, r
     res.json(JSON.parse(getByReferenceIdsResourceTypeIds)[idx]);
 });
 
-/* 
+
+/*
     游戏规则
 */
+const gameRule = fs.readFileSync(path.join(__dirname, '../jsons/gameRule.json'), { encoding: 'utf-8' });
 router.post('/game-proxy/v2/GameRule/Get', (req, res, next) => {
     res.json(JSON.parse(gameRule));
 });
 
-/* 
-    游戏总结，和BetHistory一起
+
+/*
+    游戏投注历史
 */
+
 router.post('/game-proxy/v2/BetSummary/Get', (req, res, next) => {
-    res.json(JSON.parse(BetSummary));
+    let jsonFile;
+    // game id
+    let gid = req.body.gid;
+    if (gid === "126") {
+        // 虎虎生财
+        jsonFile = '../jsons/fortune-tiger/BetSummary.json';
+    } else if (gid === "1695365") {
+        // 金龙送宝
+        jsonFile = '../jsons/fortune-dragon/BetSummary.json';
+    }
+
+    const betSummary = fs.readFileSync(path.join(__dirname, jsonFile), { encoding: 'utf-8' });
+    res.send(JSON.parse(betSummary));
 });
 
-/* 
-    返回游戏的投注历史
-*/
 router.post('/game-proxy/v2/BetHistory/Get', (req, res, next) => {
-    res.json(JSON.parse(BetHistory));
+    let jsonFile;
+    // game id
+    let gid = req.body.gid;
+    if (gid === "126") {
+        // 虎虎生财
+        jsonFile = '../jsons/fortune-tiger/BetHistory.json';
+    } else if (gid === "1695365") {
+        // 金龙送宝
+        jsonFile = '../jsons/fortune-dragon/BetHistory.json';
+    }
+
+    const betHistory = fs.readFileSync(path.join(__dirname, jsonFile), { encoding: 'utf-8' });
+    res.send(JSON.parse(betHistory));
 });
+
 
 module.exports = router;
