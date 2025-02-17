@@ -1,123 +1,79 @@
 {
     "dt": {
-        "oj": {
-            "jid": 1
-        },
-        "pid": "BymNBsWWWW",
-        "pcd": "5067agent_784563552",
-        "tk": "989QRD25-0RCL-6345-XKB6-933O5CDILNB8",
-        "st": 1,
-        "geu": "game-api/fortune-tiger/",
-        "lau": "/game-api/lobby/",
         "bau": "web-api/game-proxy/",
-        "cc": "BRL",
-        "cs": "R$",
-        "nkn": "5067agent_784563552",
+        "cc": "",
+        "cs": "",
+        "ec": [],
+        "geu": "game-api/fortune-tiger/",
         "gm": [
             {
-                "gid": 126,
-                "msdt": 1638432092000,
-                "medt": 1638432092000,
-                "st": 1,
                 "amsg": "",
+                "gid": 126,
+                "medt": 1638432092000,
+                "msdt": 1638432092000,
+                "mxe": 2500,
+                "mxehr": 8960913,
                 "rtp": {
                     "df": {
-                        "min": 96.81,
-                        "max": 96.81
+                        "max": 96.81,
+                        "min": 96.81
                     }
                 },
-                "mxe": 2500,
-                "mxehr": 8960913
+                "st": 1
             }
         ],
-        "uiogc": {
-            "bb": 0,
-            "grtp": 1,
-            "gec": 0,
-            "cbu": 0,
-            "cl": 0,
-            "mr": 0,
-            "phtr": 0,
-            "vc": 0,
-            "bfbsi": 0,
-            "bfbli": 0,
-            "il": 0,
-            "rp": 0,
-            "gc": 1,
-            "ign": 1,
-            "tsn": 0,
-            "we": 0,
-            "gsc": 0,
-            "bu": 0,
-            "pwr": 0,
-            "hd": 0,
-            "igv": 0,
-            "ivs": 1,
-            "ir": 0,
-            "hn": 1,
-            "swfbsi": 0,
-            "swfbli": 0,
-            "bf": 0,
-            "et": 0,
-            "np": 0,
-            "as": 1000,
-            "asc": 1,
-            "std": 0,
-            "hnp": 0,
-            "ts": 1,
-            "smpo": 0,
-            "swf": 0,
-            "sp": 0,
-            "rcf": 0,
-            "sbb": 0,
-            "hwl": 0
-        },
-        "ec": [
-            {
-                "n": "132bb011e7",
-                "v": "10",
-                "il": 0,
-                "om": 0,
-                "uie": {
-                    "ct": "1"
-                }
-            },
-            {
-                "n": "5e3d8c75c3",
-                "v": "6",
-                "il": 0,
-                "om": 0,
-                "uie": {
-                    "ct": "1"
-                }
-            }
-        ],
+        "ioph": "abcdefg112233",
+        "lau": "/game-api/lobby/",
+        "nkn": "100000144",
         "occ": {
             "rurl": "",
             "tcm": "",
-            "tsc": 0,
-            "ttp": 0,
             "tlb": "",
-            "trb": ""
+            "trb": "",
+            "tsc": 0,
+            "ttp": 0
         },
-        "ioph": "fbdd48d99ba7",
-        "sdn": "api",
-        "eatk": "QtsxaVEH9642e4Z7bjS/jLsfkEysZdV82feK9+4NzXlThOQvYdNBAFlVBS4j8k4Ts/qKruw34TFP8A0lQXGhAAm2KYQMvPeToajisE8wCXDFWrCZsjiEz+UQSvrQwPh/1rj80tAWB7O42GRqRm7OyoCOGuIZ25o7We59Qoezj7YfJ7OHjSIK8Tfpu/NsrWzao2dInhf3tlbb6IVTe7+AfH1sYhnOVcyFVu3TmepkWoAIbiI3gWn3TvsRs+9TUWoQRHflsI0vH5HSw6+zpcPBIKEsfFq+lWB8iuWdXaJjLIEuEr/RtosWma+gHqpwGXFT",
-        "jc": {
+        "oj": {
+            "jid": 0
+        },
+        "pcd": "100000144",
+        "pid": "",
+        "st": 1,
+        "tk": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY19pZCI6MTAwMDAwMTQ0LCJtY2hfaWQiOjEwMDEsIm1jaF91aWQiOiIxMDMuMjMxLjg0LjIyMyIsIm9sX2dpZCI6IjYwMDEiLCJjdXJyZW5jeSI6IiIsImN1cnJlbmN5X3N5bWJvbCI6IiIsImV4cCI6MTczOTUyOTY1NiwiaWF0IjoxNzM5NTIyNDU2fQ.ForLWSvMUBbOZLJJJFr_A64Ydiq91pkL4UMJOt5IZmc",
+        "uiogc": {
+            "as": 0,
+            "asc": 0,
+            "bb": 0,
             "bf": 0,
+            "bfbli": 1,
+            "bfbsi": 1,
+            "bu": 0,
+            "cbu": 0,
+            "cl": 0,
             "et": 0,
-            "np": 0,
-            "as": 1000,
-            "asc": 1,
-            "std": 0,
+            "gc": 1,
+            "gec": 0,
+            "grtp": 1,
+            "gsc": 0,
+            "hd": 0,
+            "hn": 1,
             "hnp": 0,
-            "ts": 1,
+            "ign": 1,
+            "igv": 0,
+            "il": 0,
+            "ir": 0,
+            "ivs": 1,
+            "mr": 0,
+            "np": 0,
+            "phtr": 0,
+            "pwr": 0,
+            "rp": 0,
             "smpo": 0,
-            "swf": 0,
-            "sp": 0,
-            "rcf": 0,
-            "sbb": 0,
-            "hwl": 0
+            "std": 0,
+            "ts": 0,
+            "tsn": 0,
+            "vc": 0,
+            "we": 0
         }
     },
     "err": null

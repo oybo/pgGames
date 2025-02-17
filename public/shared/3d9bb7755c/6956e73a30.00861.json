@@ -1,0 +1,1 @@
+{"Login":{"LoginFail":"Не удалось войти в систему. Количество попыток (%{times} раз)","WebLoginReload":"Перезагрузить","WebLoginDismiss":"Отклонить","WebLoginLoading":"Загрузка","WebLoginLoadPageFailed":"Сбой загрузки","WebLoginLogin":"Вход"}}

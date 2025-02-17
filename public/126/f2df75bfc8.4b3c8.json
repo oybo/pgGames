@@ -1,0 +1,9 @@
+{
+    "FTHistory": {
+        "HistoryDetailItemPrefabNormalSpin": "لفة عادية",
+        "HistoryDetailItemPrefabFreeSpin": "لفة مجانية",
+        "HistoryMultiplierDescription": "مضاعف الفوز x%{value}",
+        "HistoryFeature": "ميزة فورتشن تايجر",
+        "HistoryFeatureRespin": "لفة أخرى"
+    }
+}

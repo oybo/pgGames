@@ -34,27 +34,50 @@
 </head>
 <body>
     <!--     
-        大概推测参数
-        ot = operation token 表示这个游戏的会话token，部署本地后可以任意值
-        btt = 类型： 1=正式 2=试玩
-        ops = 登录的认证信息，部署本地后可以任意值, 但是不能为空
-        l = 语言类型，国际化
-        iwk = 
-        oc = 
-        or =  估计是CDN服务器包括静态资源的域名地址，重要
-        __hv = 
-        
-        也可以直接用这个：https://localhost/126/index.html?ot=&btt=1&ops=abc&l=zh&iwk=1&oc=0&or=static.pg-nmga.com&__hv=1
-        把链接里的&btt=1去掉，默认0模式运行
+        参数说明----
+        常规参数
+        ot  =   operator_token              token
+        btt =   bet_type                    类型： 1=正式 2=试玩
+        ops =   operator_player_session     session
+        l   =   language                    语言类型
+        or  =   origin                      静态资源等的域名地址
+        ao  =   api_origin                  动态接口的域名地址，如果为空则默认使用当前域名
+        其他参数,基本不配置
+        f       from
+        rurl    real_url
+        te      time_elapsed
+        ri      reminder_interval
+        op      operator_param
+        ct      cached_t
+        oc      or_cover
     -->
     <ul>
+        <!--
+            or=static.pg-nmga.com 为静态资源的访问域名地址，现在改成本地api.localhost
+
+            https://m.pg-nmga.com/126/index.html?ot=E48208EE-563D-6D3D-0B35-FFA2052B2DBC&btt=1&ops=aHtK0%2BleN2hqWuC5rivW9mN%2BuWfZ6ct1HSLKCxWEIUPZmfO5b8UggGDuXkIdL4aJILGwxEPB4hqkbnbO2urZaul5csfnOeNolpG5bj0h%2Fj5o%2Byd2J9S2Wcj7KFVIKXjE&l=zh&iwk=1&oc=0&or=static.pg-nmga.com&__hv=2fMEYCIQCVe3BuPVkP1jPymTyyNcmzGxU6y%2BKlrTRPqhIkXLndxgIhALeb5plZN%2FTkWbPXnbXbWVscdoX9q0Nw5g9wgTUzg6rc
+
+            https://localhost/126/index.html?ot=E48208EE-563D-6D3D-0B35-FFA2052B2DBC&btt=1&ops=123&l=zh0&or=api.localhost&ao=
+
+            https://192.168.100.166/126/index.html?ot=E48208EE-563D-6D3D-0B35-FFA2052B2DBC&btt=1&ops=123&l=zh&or=https://192.168.100.166&ao=192.168.100.166
+
+        -->
         <li class="item">
             <img src="https://public.pg-nmga.com/pages/static/image/en/Small_Icon/126/app_icon_small@3x-01a11d6e.png" alt="Image 1">
-            <button onclick="window.open('https://localhost/126/index.html?ot=E48208EE-563D-6D3D-0B35-FFA2052B2DBC&ops=aHtK0%2BleN2hqWuC5rivW9mN%2BuWfZ6ct1HSLKCxWEIUPZmfO5b8UggGDuXkIdL4aJILGwxEPB4hqkbnbO2urZaul5csfnOeNolpG5bj0h%2Fj5o%2Byd2J9S2Wcj7KFVIKXjE&l=zh&iwk=1&oc=0&or=static.pg-nmga.com&__hv=1', '_blank')">虎虎生财</button>
+            <button onclick="window.open('https://192.168.100.166/126/index.html?ot=E48208EE-563D-6D3D-0B35-FFA2052B2DBC&btt=1&ops=123&l=zh&or=https://192.168.100.166&ao=192.168.100.166', '_blank')">虎虎生财</button>
         </li>
+
+         <!--
+            https://m.pg-nmga.com/1695365/index.html?ot=E48208EE-563D-6D3D-0B35-FFA2052B2DBC&btt=1&ops=aHtK0%2BleN2hqWuC5rivW9mN%2BuWfZ6ct1HSLKCxWEIUPZmfO5b8UggGDuXkIdL4aJILGwxEPB4hqkbnbO2urZaul5csfnOeNolpG5bj0h%2Fj5o%2Byd2J9S2Wcj7KFVIKXjE&l=zh&iwk=1&oc=0&or=static.pg-nmga.com&__hv=2fMEYCIQCVe3BuPVkP1jPymTyyNcmzGxU6y%2BKlrTRPqhIkXLndxgIhALeb5plZN%2FTkWbPXnbXbWVscdoX9q0Nw5g9wgTUzg6rc
+
+            https://localhost/1695365/index.html?ot=E48208EE-563D-6D3D-0B35-FFA2052B2DBC&btt=1&ops=123&l=zh0&or=api.localhost&ao=
+
+            https://192.168.100.166/1695365/index.html?ot=E48208EE-563D-6D3D-0B35-FFA2052B2DBC&btt=1&ops=123&l=zh&or=https://192.168.100.166&ao=192.168.100.166
+
+        -->
         <li class="item">
             <img src="https://public.pg-nmga.com/pages/static/image/en/Small_Icon/fortune-dragon/app_icon_small@3x-dc4d52fe.png" alt="Image 2">
-            <button onclick="window.open('https://localhost/1695365/index.html?ot=E48208EE-563D-6D3D-0B35-FFA2052B2DBC&ops=aHtK0%2BleN2hqWuC5rivW9mN%2BuWfZ6ct1HSLKCxWEIUPZmfO5b8UggGDuXkIdL4aJILGwxEPB4hqkbnbO2urZaul5csfnOeNolpG5bj0h%2Fj5o%2Byd2J9S2Wcj7KFVIKXjE&l=zh&iwk=1&oc=0&or=static.pg-nmga.com&__hv=2fMEYCIQCVe3BuPVkP1jPymTyyNcmzGxU6y%2BKlrTRPqhIkXLndxgIhALeb5plZN%2FTkWbPXnbXbWVscdoX9q0Nw5g9wgTUzg6rc', '_blank')">金龙送宝</button>
+            <button onclick="window.open('https://192.168.100.166/1695365/index.html?ot=E48208EE-563D-6D3D-0B35-FFA2052B2DBC&btt=1&ops=123&l=zh&or=https://192.168.100.166&ao=192.168.100.166', '_blank')">金龙送宝</button>
         </li>
     </ul>
 

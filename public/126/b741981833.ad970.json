@@ -1,0 +1,9 @@
+{
+    "FTHistory": {
+        "HistoryDetailItemPrefabNormalSpin": "چرخش عادی",
+        "HistoryDetailItemPrefabFreeSpin": "چرخش رایگان",
+        "HistoryMultiplierDescription": "ضریب برد x%{value}",
+        "HistoryFeature": "ویژگی ببر بخت",
+        "HistoryFeatureRespin": "چرخش دوباره"
+    }
+}

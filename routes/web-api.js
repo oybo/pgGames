@@ -171,4 +171,26 @@ router.post('/game-proxy/v2/BetHistory/Get', (req, res, next) => {
 });
 
 
+/*
+    锦标赛
+*/
+
+const tournamentInitlite = fs.readFileSync(path.join(__dirname, '../jsons/tournamentInitlite.json'), { encoding: 'utf-8' });
+router.post('/game-proxy/Tournament/InitLite', (req, res, next) => {
+    res.send(JSON.parse(tournamentInitlite));
+});
+
+const tournamentTournamentExistance = fs.readFileSync(path.join(__dirname, '../jsons/tournamentTournamentExistance.json'), { encoding: 'utf-8' });
+router.post('/game-proxy/Tournament/TournamentExistance', (req, res, next) => {
+    res.send(JSON.parse(tournamentTournamentExistance));
+});
+
+const tournamentInit = fs.readFileSync(path.join(__dirname, '../jsons/tournamentInit.json'), { encoding: 'utf-8' });
+router.post('/game-proxy/Tournament/Init', (req, res, next) => {
+    // 这里s表示类别，1 = 进行中，2 = 报名中，3 = 已结束
+    let sType = req.body?.s;
+    res.send(JSON.parse(tournamentInit));
+});
+
+
 module.exports = router;

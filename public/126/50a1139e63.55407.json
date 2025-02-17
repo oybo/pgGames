@@ -1,0 +1,9 @@
+{
+    "FTHistory": {
+        "HistoryDetailItemPrefabNormalSpin": "نارمل سپن",
+        "HistoryDetailItemPrefabFreeSpin": "فری سپن",
+        "HistoryMultiplierDescription": "ضارب جیتیں x%{value}",
+        "HistoryFeature": "فارچون ٹائیگر فیچر",
+        "HistoryFeatureRespin": "ری سپن"
+    }
+}
