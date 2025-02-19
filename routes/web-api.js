@@ -46,10 +46,17 @@ router.post('/auth/session/v2/verifySession', function (req, res, next) {
 
 
 /*
-    游戏信息，id和名称
+    获取游戏信息，id和名称
 */
-const gameName = fs.readFileSync(path.join(__dirname, '../jsons/gameName.json'), { encoding: 'utf-8' });
 router.post('/game-proxy/v2/GameName/Get', function (req, res, next) {
+    // 根据语言返回对应数据
+    let lang = req.body?.lang;
+    if ("da" === lang || "en" === lang || "en-stkus" === lang || "es" === lang || "it" === lang || "nl" === lang || "pt" === lang || "pt-br" === lang || "ro" === lang
+        || "sh" === lang || "sv" === lang) {
+        // 这些国家都是使用英文
+        lang = 'en';
+    }
+    const gameName = fs.readFileSync(path.join(__dirname, '../jsons/gamename-langs/' + lang + '.json'), { encoding: 'utf-8' });
     res.send(JSON.parse(gameName));
 });
 
