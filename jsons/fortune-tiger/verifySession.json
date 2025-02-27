@@ -1,8 +1,8 @@
 {
     "dt": {
         "bau": "web-api/game-proxy/",
-        "cc": "",
-        "cs": "",
+        "cc": "BRL",
+        "cs": "R$",
         "ec": [],
         "geu": "game-api/fortune-tiger/",
         "gm": [
@@ -24,7 +24,7 @@
         ],
         "ioph": "abcdefg112233",
         "lau": "/game-api/lobby/",
-        "nkn": "100000144",
+        "nkn": "100000142",
         "occ": {
             "rurl": "",
             "tcm": "",
@@ -36,10 +36,10 @@
         "oj": {
             "jid": 0
         },
-        "pcd": "100000144",
+        "pcd": "100000142",
         "pid": "",
         "st": 1,
-        "tk": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY19pZCI6MTAwMDAwMTQ0LCJtY2hfaWQiOjEwMDEsIm1jaF91aWQiOiIxMDMuMjMxLjg0LjIyMyIsIm9sX2dpZCI6IjYwMDEiLCJjdXJyZW5jeSI6IiIsImN1cnJlbmN5X3N5bWJvbCI6IiIsImV4cCI6MTczOTUyOTY1NiwiaWF0IjoxNzM5NTIyNDU2fQ.ForLWSvMUBbOZLJJJFr_A64Ydiq91pkL4UMJOt5IZmc",
+        "tk": "eyJhbGciOiJIUzICI6IkpXVCJ9.eyJhY19pZCI6MTAwMDAwMTQ0LCJtY2hfaWQiOjEwMDEsIm1jaF91aWQiOiIxMDMuMjMxLjg0LjIyMyIsIm9sX2dpZCI6IjYwMDEiLCJjdXJyZW5jeSI6IiIsImN1cnJlbmN5X3N5bWJvbCI6IiIsImV4cCI6MTczOTUyOTY1NiwiaWF0IjoxNzM5NTIyNDU2fQ.ForLWSvMUBbOZLJJJFr_A64Ydiq91pkL4UMJOt5IZmc",
         "uiogc": {
             "as": 0,
             "asc": 0,

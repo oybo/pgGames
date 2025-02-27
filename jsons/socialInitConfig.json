@@ -1,1 +1,16 @@
-{"dt":{"countries":null,"achievements":null,"levelActionPermissions":null,"gameChatEmoticonTemplateDatas":null,"gameSpecificThresholdId":null,"configurationSetting":null,"onlinePlayerCounts":null,"playerFavouriteGamesDatas":null,"playerProfileInfo":null,"levelBackground":null,"onlinePlayerCount":null},"err":null}
+{
+    "dt": {
+        "countries": null,
+        "achievements": null,
+        "levelActionPermissions": null,
+        "gameChatEmoticonTemplateDatas": null,
+        "gameSpecificThresholdId": null,
+        "configurationSetting": null,
+        "onlinePlayerCounts": null,
+        "playerFavouriteGamesDatas": null,
+        "playerProfileInfo": null,
+        "levelBackground": null,
+        "onlinePlayerCount": null
+    },
+    "err": null
+}
